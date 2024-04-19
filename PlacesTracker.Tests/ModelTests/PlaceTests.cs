@@ -25,8 +25,8 @@ namespace PlacesTracker.Tests
 		{
 			string cityName = "Williston";
 			Place newPlace = new(cityName);
-			string result = newPlace.CityName;
-			Assert.AreEqual(cityName, result);
+			string actual = newPlace.CityName;
+			Assert.AreEqual(cityName, actual);
 		}
 		
 		[TestMethod]
@@ -45,8 +45,8 @@ namespace PlacesTracker.Tests
 			Place place2 = new("Saskatoon");
 			Place place3 = new("Omaha");
 			List<Place> expected = new() { place1, place2, place3 };
-			List<Place> actualResult = Place.GetAll();
-			CollectionAssert.AreEqual(expected, actualResult);
+			List<Place> actual = Place.GetAll();
+			CollectionAssert.AreEqual(expected, actual);
 		}
 		
 		[TestMethod]
@@ -58,6 +58,15 @@ namespace PlacesTracker.Tests
 			List<Place> expected = new() { };
 			Place.ClearAll();
 			CollectionAssert.AreEqual(expected, Place.GetAll());
+		}
+		
+		[TestMethod]
+		public void GetId_ReturnsId_Int()
+		{
+			Place place1 = new("Ramsey");
+			Place place2 = new("Anoka");
+			int expected = 2;
+			Assert.AreEqual(expected, place2.Id);
 		}
 	}
 }

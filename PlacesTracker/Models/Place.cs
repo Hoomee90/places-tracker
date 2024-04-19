@@ -5,6 +5,7 @@ namespace PlacesTracker.Models
 	public class Place
 	{
 		
+		public int Id { get; }
 		public string CityName { get; set; }
 		private static List<Place> _instances = new() { };
 		
@@ -12,6 +13,7 @@ namespace PlacesTracker.Models
 		{
 			CityName = city;
 			_instances.Add(this);
+			Id = _instances.Count;
 		}
 		
 		public static List<Place> GetAll()
