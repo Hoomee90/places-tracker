@@ -25,5 +25,10 @@ namespace PlacesTracker.Models
 		{
 			_instances.Clear();
 		}
+		
+		public static Place Find(int id)
+		{
+			return _instances[id - 1];
+		}
 	}
 }

@@ -39,7 +39,7 @@ namespace PlacesTracker.Tests
 		}
 		
 		[TestMethod]
-		public void GetAll_ReturnsAllPlaceInstances_List()
+		public void GetAll_ReturnsAllPlaceInstances_PlaceList()
 		{
 			Place place1 = new("Regina");
 			Place place2 = new("Saskatoon");
@@ -67,6 +67,15 @@ namespace PlacesTracker.Tests
 			Place place2 = new("Anoka");
 			int expected = 2;
 			Assert.AreEqual(expected, place2.Id);
+		}
+		
+		[TestMethod]
+		public void Find_ReturnInstanceWithId_Place()
+		{
+			Place place1 = new("St. Paul");
+			Place place2 = new("Chicago");
+			Place actual = Place.Find(2);
+			Assert.AreEqual(place2, actual);
 		}
 	}
 }
