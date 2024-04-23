@@ -7,16 +7,19 @@ namespace PlacesTracker.Models
 		
 		public int Id { get; }
 		public string CityName { get; set; }
+		public string JournalEntry { get; set; }
 		public string StayDuration { get; set; }
 		public string Color { get; set; }
 		private static List<Place> _instances = new() { };
 		
-		public Place(string city, string duration, string color)
+		public Place(string city, string duration, string color, string journal)
 		{
 			CityName = city;
+			Color = color;
+			StayDuration = duration;
+			JournalEntry = journal;
 			_instances.Add(this);
 			Id = _instances.Count;
-			Color = color;
 		}
 		
 		public static List<Place> GetAll()

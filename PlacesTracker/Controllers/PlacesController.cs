@@ -20,9 +20,9 @@ namespace PlacesTracker.Controllers
 		}
 
 		[HttpPost("/places")]
-		public ActionResult Create(string city, string duration, string color)
+		public ActionResult Create(string city, string duration, string color, string journal)
 		{
-			Place _ = new(city, duration, color);
+			Place _ = new(city, duration, color, journal);
 			return RedirectToAction("Index");
 		}
 		
