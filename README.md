@@ -1,8 +1,8 @@
-# Title
+# Places Tracker
 
 #### By **Samantha Callie**
 
-#### Subtitle
+#### Track the places you've been
 
 ## Technologies Used
 
@@ -15,13 +15,13 @@
 
 ## Description
 
-Description
+This site allows users to create entries detailing various places they've been. They can fill out a form with the place's name, how long they stayed, a color to display it in, and a journal entry. They can then view a list of all the places they have entered, and click them to see details.
 
 ## Setup/Installation Requirements
 
 1. Press the green <> Code button and select Download ZIP
 2. Unzip file
-4. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "ProjectName".
+4. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "PlacesTracker".
 5. In the command line, run the command `dotnet run` to compile and execute the application. Then navigate to https://localhost:5001.
 6. Optionally, you can run `dotnet run --launch-profile "production"` to run in the run in production mode, as oppose to development.
 
