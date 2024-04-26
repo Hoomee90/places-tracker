@@ -10,7 +10,7 @@
       crossorigin="anonymous">
   </head>
   <body class="container">
-    <form action="/places" method="post" class="m-4">
+    <form action="/places" id="place-form" method="post" class="m-4">
       <div class="row g-2">
         <div class="col-auto">
           <label for="city" class="col-form-label">Place Name:</label>
@@ -27,7 +27,7 @@
       </div>
       <label for="journal" class="form-label mt-1">Journal Entry:</label>
       <div class="col-sm-8 mb-3 col-12">
-        <textarea id="journal" name="journal" class="form-control" rows="3"></textarea>
+        <textarea id="journal" name="journal" class="form-control" rows="3" form="place-form"></textarea>
       </div>
       <button type="submit" class="btn btn-warning">Submit</button>
       <a href='/' class="btn btn-primary">Return home</a>

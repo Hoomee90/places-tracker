@@ -15,12 +15,12 @@
       <div class="card-body">
         <p class="card-text">Stayed for @Model.StayDuration.</p>
         <h3 class="card-title">Journal:</h3>
-        <div class="card text-start bg-primary p-1">
+        <div class="card text-start p-1 mb-3" style="background-color: @Model.Color">
           <div class="card-body text-bg-light">
-            @* TODO: Make this work *@
-            <p class="card-text"@Model.JournalEntry</p>
+            <p class="card-text">@Model.JournalEntry</p>
           </div>
         </div>
+        <a href="/places" class="btn btn-warning">Back</a>
       </div>
     </div>
   </body>
